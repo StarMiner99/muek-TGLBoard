@@ -2,7 +2,6 @@
 #include "hardware/pio.h"
 #include "hardware/irq.h"
 
-#include "tinyLetters.h"
 
 #include "PIOMatrixOutput/pio_matrix_output.h"
 #include "ScrollText/scroll_text.h"
@@ -11,6 +10,7 @@
 #include "Firework/firework_animation.h"
 #include "TetrisGame/tetris.h"
 #include "SnakeAI/snake_ai_animation.h"
+#include "TinyLetter/tiny_letter_test.h"
 
 #define BUTTON1 18
 #define BUTTON2 19
@@ -34,6 +34,7 @@ DinoGame game(&ledMatrix, &frame);
 FireworkAnimation fireworks(&ledMatrix, &frame);
 Tetris tetrisGame(&ledMatrix, &frame, &scrollTextController);
 SnakeAI snake(&ledMatrix, &frame);
+TinyLetterTest tinyLetterTest(&ledMatrix, &frame);
 
 
 display_program *programs[2];
@@ -62,8 +63,9 @@ void setup() {
     Serial.begin(115200);
     delay(3500); // Just so that the Serial Console has time to connect
 
+    //tinyLetterTest.setDisplayChar('h');
 
-    programs[0] = &snake;
+    programs[0] = &tinyLetterTest;
     programs[0]->restart();
 
     scrollTextController.setText(&text);

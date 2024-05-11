@@ -29,6 +29,7 @@ static const uint8_t tinyS[] = {0b111, 0b100, 0b011,0b111, 3}; // similar to 5
 static const uint8_t tinyT[] = {0b111, 0b010, 0b010,0b010, 3};
 static const uint8_t tinyU[] = {0b101, 0b101, 0b101,0b111, 3};
 static const uint8_t tinyV[] = {0b101, 0b101, 0b101,0b010, 3};
+static const uint8_t tinyW[] = {0b101, 0b101, 0b111,0b101, 3};
 static const uint8_t tinyX[] = {0b101, 0b010, 0b010,0b101, 3};
 static const uint8_t tinyY[] = {0b101, 0b101, 0b010,0b010, 3};
 static const uint8_t tinyZ[] = {0b111, 0b001, 0b010,0b111, 3}; // similar to 2
