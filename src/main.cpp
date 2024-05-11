@@ -2,6 +2,8 @@
 #include "hardware/pio.h"
 #include "hardware/irq.h"
 
+#include "tinyLetters.h"
+
 #include "PIOMatrixOutput/pio_matrix_output.h"
 #include "ScrollText/scroll_text.h"
 #include "color.h"
@@ -61,7 +63,7 @@ void setup() {
     delay(3500); // Just so that the Serial Console has time to connect
 
 
-    programs[0] = &tetrisGame;
+    programs[0] = &snake;
     programs[0]->restart();
 
     scrollTextController.setText(&text);
